@@ -1,50 +1,38 @@
 const express = require('express')
-const axios = require('axios')
-const cheerio = require('cheerio')
 const PORT = process.env.PORT || 5000
 const app = express()
+const notFound = require('./middleware/not-found');
+const errorHandlerMiddleware = require('./middleware/error-handle');
+const cryptoRouter = require('./routes/crypto');
+const nftsRouter = require('./routes/nfts');
+const iposRouter = require('./routes/ipos');
 
 
 
-const sources =[
-    {
-        name:'Investemnt U',
-        url:"https://investmentu.com/"
-    },
-    {
-        name:'cointelegraph',
-        url:"https://cointelegraph.com/"
+
+
+//static
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }))
+
+//routes
+app.get('/', (req, res) => {
+    res.send('<h1>Investment news tracker APIs</h1><ul><li><a href="/api/v1/crypto">Crypto</a></li> <li><a href="/api/v1/ipos">IPOs</a></li><li><a href="/api/v1/nfts">NFTs</a></li></ul>');
+});
+
+app.use('/api/v1/crypto', cryptoRouter)
+app.use('/api/v1/ipos', iposRouter)
+app.use('/api/v1/nfts', nftsRouter)
+
+app.use(notFound)
+app.use(errorHandlerMiddleware)
+
+
+app.listen(PORT, (err) => {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log(`Server is listening on ${PORT}`)
     }
-
-]
-
-
-const infoLinks=[]
-
-sources.forEach(source=>{
-    axios.get(source.url)
-    .then((res)=>{
-        const html = res.data
-        const $= cheerio.load(html)
-        $('a:contains("IPO")', html).each(function(){
-                    const title= $(this).text()
-                    const link= $(this).attr("href")
-                    infoLinks.push({
-                        title,
-                        link,
-                        source: source.name
-                    })
-        })
-    })
-})
-app.get("/", (req,res)=>{
-    res.json(infoLinks)
-
 })
 
-
-
-
-app.listen(PORT, ()=>{
-    console.log(`Server is listening on ${PORT}`)
-})
