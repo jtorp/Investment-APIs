@@ -1,0 +1,66 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+
+}
+
+@media only screen and (max-width: 800px) {
+    html {
+        font-size: 57%;
+    }
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    padding: 8rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        padding: 1rem;
+    }
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        border-radius: 0;
+    }
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+
+a {
+    text-decoration: none;
+    color: #2c2d2a;
+    font-size: 1.5rem;
+}
+
+span {
+    display: inline-block;
+    font-size: 1.3rem;
+    color: #373737;
+    margin-bottom: 2rem;
+    margin-right: 5rem;
+}
+
+@media only screen and (max-width: 800px) {
+    span {
+        margin-right: 0;
+    }
+}

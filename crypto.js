@@ -1,6 +1,7 @@
 
 
 const crypto = [
+
     {
         name: 'Investemnt U',
         url: "https://investmentu.com/",
@@ -12,9 +13,24 @@ const crypto = [
         base: "https://cointelegraph.com"
     },
     {
-        name: 'simplywallstreet',
-        url: "https://simplywall.st/",
-        base: "https://simplywall.st/"
+        name: 'yahoofinanance',
+        url: "https://finance.yahoo.com/topic/crypto/",
+        base: "https://finance.yahoo.com"
+    },
+    {
+        name: 'cryptodaily',
+        url: " https://cryptodaily.co.uk/tag/opinion/",
+        base: ""
+    },
+    {
+        name: 'coindesk',
+        url: "https://www.coindesk.com/",
+        base: ""
+    },
+    {
+        name: "etfdigest",
+        url: "https://www.etfdigest.com/",
+        base: "https://www.etfdigest.com/"
     }
 
 ]

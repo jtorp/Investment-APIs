@@ -8,18 +8,10 @@ const nftsRouter = require('./routes/nfts');
 const iposRouter = require('./routes/ipos');
 
 
-
-
-
-//static
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }))
 
-//routes
-app.get('/', (req, res) => {
-    res.send('<h1>Investment news tracker APIs</h1><ul><li><a href="/api/v1/crypto">Crypto</a></li> <li><a href="/api/v1/ipos">IPOs</a></li><li><a href="/api/v1/nfts">NFTs</a></li></ul>');
-});
-
+app.use(express.static('./public'))
 app.use('/api/v1/crypto', cryptoRouter)
 app.use('/api/v1/ipos', iposRouter)
 app.use('/api/v1/nfts', nftsRouter)
