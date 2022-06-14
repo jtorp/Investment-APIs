@@ -1,7 +1,7 @@
 {
   "name": "nft-tracking-api",
   "version": "1.0.0",
-  "description": "IPO tracking APIs",
+  "description": "Investment tracking APIs",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",

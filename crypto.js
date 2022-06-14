@@ -29,9 +29,21 @@ const crypto = [
     },
     {
         name: "etfdigest",
-        url: "https://www.etfdigest.com/",
+        url: "https://www.etfdigest.com/category/cryptocurrency/",
         base: "https://www.etfdigest.com/"
-    }
+    },
+    {
+        name: "coinstatsapp",
+        url: "https://coinstats.app/news",
+        base: ""
+    },
+    
+    {
+        name: "https://seekingalpha.com/",
+        url: "https://seekingalpha.com/",
+        base: ""
+    },
+
 
 ]
 

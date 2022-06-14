@@ -6,37 +6,36 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- favicon -->
-
-
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
   <!-- normalize css -->
   <link rel="stylesheet" href="./normalize.css" />
   <!-- style css -->
   <link rel="stylesheet" href="./styles.css" />
   <script src="./gradient.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-  <title>ETF tracker </title>
+  <title>Investment digest - Crypto ETF, NFTS </title>
 </head>
 
 <body id="gradient">
-  <div class="container">
+  <h1>Investment digest</h1>
+  <h2> Crypto, NFT and IPO news digest from verified 40+ news sources</h2>
 
-    <h1>Investment digest</h1>
+    <div class="endpoint">
+      <a href="/api/v1/crypto" class="endpoint-link">             
+         <img class="endpoint-image" src="assets/crypto.svg"/>
+      </a>
+      <a href="/api/v1/nfts" class="endpoint-link">
+        <img class="endpoint-image" src="assets/nft.svg"/>
+      </a>
 
-    <a href="/api/v1/crypto">
-      Crypto
-    </a>
-    <a href="/api/v1/nfts">
-      NFT's
+      <a href="/api/v1/crypto" class="endpoint-link">
+        <img class="endpoint-image" src="assets/ipo.svg"/>
+      </a>
+    </div>
 
-    </a>
-    <a href="/api/v1/ipo">
-      IPOs
-    </a>
-
-
-
-  </div>
-
+  
+      <a  class="documentation-link" href="/https://documenter.getpostman.com/view/631643/JsLs/#ab083bce-916e-4c19-a280-96c273dea4e4"> docs &#8594;
+      </a>
+  
 </body>
-
 </html>
