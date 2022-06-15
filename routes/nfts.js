@@ -2,10 +2,10 @@ const express = require('express')
 const router = express.Router()
 
 const {
-  getSources,
+  getAllNftSources,
 } = require('../controllers/nfts')
 
 
-router.route('/').get(getSources)
+router.route('/').get(getAllNftSources)
 
 module.exports = router

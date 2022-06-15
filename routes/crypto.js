@@ -2,11 +2,11 @@ const express = require('express')
 const router = express.Router()
 
 const {
-  getSources,getSourceByName
+  getCryptoSources, getSourceByName
 } = require('../controllers/crypto')
 
 
-router.route('/').get(getSources)
+router.route('/').get(getCryptoSources)
 router.route('/:sourceName').get(getSourceByName)
 
 module.exports = router

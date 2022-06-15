@@ -5,6 +5,7 @@ const notFound = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handle');
 const cryptoRouter = require('./routes/crypto');
 const nftsRouter = require('./routes/nfts');
+const ipoRouter = require('./routes/ipos');
 
 
 app.use(express.json());
@@ -13,6 +14,8 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.static('./public'))
 app.use('/api/v1/crypto', cryptoRouter)
 app.use('/api/v1/nfts', nftsRouter)
+app.use('/api/v1/ipos', ipoRouter)
+
 
 app.use(notFound)
 app.use(errorHandlerMiddleware)
