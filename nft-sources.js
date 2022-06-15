@@ -5,7 +5,7 @@ const nft = [
     {
         name: "zycrypto",
         url: "https://www.zycrypto.com",
-        base: "https://zycrypto.com"
+        base: ""
     },
 
     {
