@@ -7,6 +7,6 @@ const {
 
 
 router.route('/').get(getCryptoSources)
-router.route('/:sourceName').get(getSourceByName)
+router.route('/:name').get(getSourceByName)
 
 module.exports = router

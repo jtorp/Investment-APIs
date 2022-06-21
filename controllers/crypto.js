@@ -40,9 +40,9 @@ const getCryptoSources = async (req, res) => {
 
 
 const getSourceByName = asyncWrapper(async (req, res) => {
-    const sourceName = req.params.sourceName
-    const sourceUrl = crypto.filter(item => item.name == sourceName)[0].url
-    const sourceBase = crypto.filter(item => item.name == sourceName)[0].base
+    const name = req.params.name
+    const sourceUrl = crypto.filter(item => item.name == name)[0].url
+    const sourceBase = crypto.filter(item => item.name == name)[0].base
 
 
     axios.get(sourceUrl)
@@ -50,18 +50,17 @@ const getSourceByName = asyncWrapper(async (req, res) => {
             const html = response.data
             const $ = cheerio.load(html)
             const articlesBySourceName = []
-            const c1 = $(`a:contains("crypto")`, html);
-            const c2 = $('a:contains("Crypto")', html)
-            const searchNode = (c1 && c2)
-            $(searchNode).each((index, element) => {
+
+            $(`a`, html).each((index, element) => {
 
                 const title = $(element).text().trim().replace(/\\n/g, '')
                 const url = $(element).attr('href')
 
+                if (title.length > 20 && title.toLowerCase().includes("crypto")) 
                 articlesBySourceName.push({
                     title,
                     url: sourceBase + url,
-                    source: sourceName
+                    source: name
                 })
             })
             res.json({ data: articlesBySourceName })
