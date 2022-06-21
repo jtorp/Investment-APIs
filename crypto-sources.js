@@ -46,8 +46,8 @@ const crypto = [
     },
     {
         name: "morningstar",
-        url: "https://www.morningstar.com/",
-        base: ""
+        url: "https://www.morningstar.com",
+        base: "https://www.morningstar.com"
     },
     {
         name: "financialtimes",
@@ -59,7 +59,6 @@ const crypto = [
         url: "https://www.wsj.com",
         base: ""
     },
-
 
 ]
 
