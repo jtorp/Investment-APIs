@@ -55,11 +55,6 @@ const nft = [
         url: "https://bitcoinist.com",
         base: ""
     },
-    {
-        name: "cryptoglobe",
-        url: "https://www.cryptoglobe.com",
-        base: ""
-    }
 
 ]
 
