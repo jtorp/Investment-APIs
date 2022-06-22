@@ -1,13 +1,15 @@
 const express = require('express')
 const PORT = process.env.PORT || 5000
 const app = express()
+const cors = require('cors');
+
 const notFound = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handle');
 const cryptoRouter = require('./routes/crypto');
 const nftsRouter = require('./routes/nfts');
 const ipoRouter = require('./routes/ipos');
 
-
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }))
 

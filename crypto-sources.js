@@ -1,5 +1,3 @@
-
-
 const crypto = [
 
     {
@@ -59,6 +57,21 @@ const crypto = [
         url: "https://www.wsj.com",
         base: ""
     },
+    {
+        name: "bitcoinist",
+        url: "https://bitcoinist.com",
+        base: ""
+    },
+    {
+        name: "bctd",
+        url: "https://bctd.news/",
+        base: ""
+    },
+    {
+        name: "bitcoinwarrior",
+        url: "https://bitcoinwarrior.net/",
+        base: ""
+    }
 
 ]
 
