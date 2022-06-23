@@ -11,7 +11,7 @@ nft.forEach(nftSource => {
             const html = response.data
             const $ = cheerio.load(html)
 
-            $('.entry-title, .td-module-title, .story-row__title, .latest-news__title, .col-12, .col-md-7,.ipm-category-title, .post-card__header, .post-card-inline__header, .jeg_post_title, .title, .mh-posts-list-title, .TextAlignModule _2jPEQ _1rI0O').children('a').each((index, element) => {
+            $('.entry-title, .td-module-title, .story-row__title, .latest-news__title, .col-12, .col-md-7,.ipm-category-title, .post-card__header, .post-card-inline__header, .jeg_post_title, .title, .mh-posts-list-title, .TextAlignModule _2jPEQ _1rI0O, .card-title, .two-line-ellipsis, .media-heading, . entry-title, .mvp-blog-story-wrap ').children('a').each((index, element) => {
                 const title = $(element).text()
                     .trim().replace(/[\n\t]/g, "");
                 const url = $(element).attr('href')
@@ -21,13 +21,9 @@ nft.forEach(nftSource => {
                         title,
                         url: nftSource.base + url,
                         source: nftSource.name
-
                     })
-
                 };
-
             })
-
         }).catch(error => console.log(error))
 })
 

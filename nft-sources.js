@@ -27,7 +27,7 @@ const nft = [
     },
 
     {
-        name: "cointelegraph",
+        name: "cointelegraph",  
         url: "https://cointelegraph.com",
         base: "https://cointelegraph.com"
     },
@@ -64,7 +64,28 @@ const nft = [
         name: "thedailybeast",
         url: "http://www.thedailybeast.com ",
         base: ""
+    },
+    {
+        name: 'yahoofinanance',
+        url: "https://finance.yahoo.com/cryptocurrencies/",
+        base: "https://finance.yahoo.com"
+    },
+    {
+        name: "coinquora",
+        url: "https://coinquora.com",
+        base: ""
+    },
+    {
+        name: "cryptoglobe",
+        url: "https://www.cryptoglobe.com/latest/cryptocurrency",
+        base: "https://www.cryptoglobe.com"
+    },
+    {
+        name: "cryptopotato",
+        url: "https://cryptopotato.com",
+        base: ""
     }
+
 
 ]
 

@@ -71,8 +71,17 @@ const crypto = [
         name: "bitcoinwarrior",
         url: "https://bitcoinwarrior.net/",
         base: ""
+    },
+    {
+        name: "reuters",
+        url: 'https://www.reuters.com/business/future-of-money',
+        base: "https://www.reuters.com"
+    },
+    {
+        name: "investorjunkie",
+        url: "https://investorjunkie.com/crypto/",
+        base: ""
     }
-
 ]
 
 
