@@ -10,7 +10,7 @@ async function getTechEtfs() {
       const $ = cheerio.load(html_data);
 
       const keys = [
-        "symbol",
+        "Symbol",
         "ETF Name",
         "Total Assets(thous)",
         "YTD %",

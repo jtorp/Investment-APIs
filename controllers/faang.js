@@ -10,11 +10,11 @@ async function faangInfo() {
       const $ = cheerio.load(html_data);
 
       const keys = [
-        "symbol",
-        "name",
-        "closing price",
-        "change",
-        "change %"
+        "Symbol",
+        "Name",
+        "Closing price",
+        "Change",
+        "Change %"
       ];
 
       $('tbody> tr.data-rowAAPL , tr.data-rowAMZN, tr.data-rowCOIN, tr.data-rowGOOG, tr.data-rowINTC, tr.data-rowMSFT, tr.data-rowMETA, tr.data-rowAMD, tr.data-rowNVDA, tr.data-rowV, tr.data-rowQCOM, tr.data-rowSPOT,  tr.data-rowBABA,  tr.data-rowTSLA,  tr.data-rowPYPL').each((index, element) => {
