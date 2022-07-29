@@ -7,7 +7,9 @@ const notFound = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handle');
 const cryptoRouter = require('./routes/crypto');
 const nftsRouter = require('./routes/nfts');
-const memeStocksRouter = require('./routes/memestocks');
+const faangRouter = require('./routes/faang');
+ const etfRouter = require('./routes/other');
+
 
 app.use(cors());
 app.use(express.json());
@@ -16,7 +18,8 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.static('./public'))
 app.use('/api/v1/crypto', cryptoRouter)
 app.use('/api/v1/nfts', nftsRouter)
-app.use('/api/v1/memestocks', memeStocksRouter)
+app.use('/api/v1/faangStocks', faangRouter)
+app.use('/api/v1/techEtfs', etfRouter)
 
 
 app.use(notFound)
